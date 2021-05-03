@@ -1,23 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Post from "./Post";
+import ApprovalCard from "./ApprovalCard";
 
 const App = () => {
   return (
     <div>
-      <Post
-        author="Hyacinthia"
-        date="22 maart 2022"
-        text="Wat een mooie website"
-      />
-      <Post
-        author="Diana"
-        date="22 maart 2022"
-        text="Ja bedankt, ik heb echt mijn best gedaan"
-      />
-      <Post author="Rachel" date="22 maart 2022" text="We zijn bijna klaar" />
+      <ApprovalCard>
+        <Post name="Hyacinthia" date="Today 3 mei 2021" text="fawaka!!" />
+      </ApprovalCard>
+      <ApprovalCard>
+        <Post name="Hyacinthia" date="Today 3 mei 2021" text="Boeng!!" />
+      </ApprovalCard>
+      <ApprovalCard>
+        <Post name="Hyacinthia" date="Today 3 mei 2021" text="fawaka!!" />
+      </ApprovalCard>
     </div>
   );
 };
+
+export default App;
 
 ReactDOM.render(<App />, document.querySelector("#root"));
